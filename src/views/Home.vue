@@ -18,7 +18,7 @@
       <ul>
         <li v-for="(category,key) in product_categories" :key="key">
           <router-link :to="{name:'products',query:{category_id:category.id}}" class="cateBox">
-            <div class="cate_pic half">
+            <div class="cate_pic half flexPic">
               <img :src="category.mid_img">
             </div>
             <div class="cate_title half">

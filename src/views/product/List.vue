@@ -8,8 +8,8 @@
       <section class="right">
         <h3 id="rightBoxTitle">Products</h3>
         <ul
-          v-loading="loading"
           id="contentBox"
+          v-loading="loading"
         >
           <li v-for="(product,key) in products" :key="key" class="item">
             <router-link :to="{name:'product.show',params:{id:product.id}}">
@@ -21,7 +21,7 @@
           </li>
         </ul>
         <div v-show="more_data" class="text_center">
-          <el-button @click="getProducts" :loading="loading" type="primary">MORE PRODUCTS</el-button>
+          <el-button :loading="loading" type="primary" @click="getProducts">MORE PRODUCTS</el-button>
         </div>
       </section>
     </div>

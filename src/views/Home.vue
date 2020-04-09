@@ -189,7 +189,7 @@ export default {
     a{display: block;box-shadow: 0 0 10px #e9e9e9;}
     .newIcon span{background:$main_green;font-size: 14px;color: #fff;padding: 5px 10px;display: inline-block;margin-bottom: 5px;}
     .txt{box-sizing: border-box; padding: 25px 6.5% 0}
-    .newPic{height: 300px}
+    .newPic .pic{height: 300px}
     .newTitle{height: 48px;font-family: "Open Sans Bold";overflow: hidden;
       font-size: 20px;
       color: #262a31;}

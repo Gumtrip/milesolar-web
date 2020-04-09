@@ -73,10 +73,11 @@
               <h3 class="newTitle" v-text="article.title"></h3>
               <div class="newDate" v-text="article.create_date"></div>
             </div>
-            <div class="newPic">
-              <div class="pic flexPic">
+            <div class="newPic picBox">
+              <div class="pic">
                 <img :src="article.sm_img">
               </div>
+              <span></span>
             </div>
           </router-link>
         </li>
@@ -142,8 +143,8 @@ export default {
   #banner a{display: block;text-align: center}
   #indexCategories{max-width: 1920px;margin:0 auto;
     ul{display: flex;}
-    li{;flex: 0 0 25%}
-    .cateBox{display: flex;justify-content: space-between;box-sizing: border-box;; padding: 10% 0;background-image: linear-gradient(to right, #e1e0e0 , #fffeff)}
+    li{;flex: 0 0 25%;}
+    .cateBox{display: flex;justify-content: space-between;box-sizing: border-box;height: 330px; padding: 10% 0;background-image: linear-gradient(to right, #e1e0e0 , #fffeff)}
     .half{flex:0 0 50%}
     .cate_title{ box-sizing: border-box;; padding:0 3%;
       h3{font-size: 30px;color: #9d9d9d;margin-bottom: 20%;height: 100px;overflow: hidden}
@@ -188,6 +189,7 @@ export default {
     a{display: block;box-shadow: 0 0 10px #e9e9e9;}
     .newIcon span{background:$main_green;font-size: 14px;color: #fff;padding: 5px 10px;display: inline-block;margin-bottom: 5px;}
     .txt{box-sizing: border-box; padding: 25px 6.5% 0}
+    .newPic{height: 300px}
     .newTitle{height: 48px;font-family: "Open Sans Bold";overflow: hidden;
       font-size: 20px;
       color: #262a31;}

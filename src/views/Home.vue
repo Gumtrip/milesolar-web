@@ -5,7 +5,7 @@
         <el-carousel trigger="click">
           <el-carousel-item v-for="(banner,key) in banners" :key="key">
             <router-link :to="banner.url">
-              <img src="../assets/banner-1.jpg" alt="">
+              <img src="../assets/banner.png" alt="">
             </router-link>
           </el-carousel-item>
         </el-carousel>

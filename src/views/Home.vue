@@ -1,19 +1,14 @@
 <template>
   <div>
     <section id="banner">
-      <ul>
-        <el-carousel trigger="click">
-          <el-carousel-item v-for="(banner,key) in banners" :key="key">
-            <router-link :to="banner.url">
-              <img src="../assets/banner.png" alt="">
-            </router-link>
-          </el-carousel-item>
-        </el-carousel>
-
-      </ul>
-
+      <swiper ref="mySwiper">
+        <swiper-slide v-for="(banner,key) in banners" :key="key">
+          <router-link :to="banner.url">
+            <img src="../assets/banner.png" alt="">
+          </router-link>
+        </swiper-slide>
+      </swiper>
     </section>
-
     <section id="indexCategories">
       <ul>
         <li v-for="(category,key) in product_categories" :key="key">
@@ -31,7 +26,6 @@
         </li>
       </ul>
     </section>
-
     <section v-if="aboutsUs" id="aboutUs">
       <div class="wrapper">
         <div class="leftBox">
@@ -85,11 +79,12 @@
     </section>
   </div>
 </template>
-
 <script>
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+import 'swiper/css/swiper.css'
 export default {
   name: 'Home',
-  components: {},
+  components: { Swiper, SwiperSlide },
   data() {
     return {
       product_categories: [],

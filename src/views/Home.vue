@@ -3,7 +3,7 @@
     <section id="banner">
       <swiper ref="mySwiper">
         <swiper-slide v-for="(banner,key) in banners" :key="key">
-          <router-link :to="banner.url">
+          <router-link :to="banner.url" class="bannerImg">
             <img src="../assets/banner.png" alt="">
           </router-link>
         </swiper-slide>
@@ -135,7 +135,11 @@ export default {
 
 <style scoped lang="scss">
   @import "../styles/variables";
-  #banner a{display: block;text-align: center}
+  #banner {
+    a{display: block;text-align: center;}
+    .bannerImg{width: 100%}
+    .bannerImg img{max-width: 100%}
+  }
   #indexCategories{max-width: 1920px;margin:0 auto;
     ul{display: flex;}
     li{;flex: 0 0 25%;}
